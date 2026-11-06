@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background: #f7f7f5;
+  color: #222;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 24px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #d9480f;
+}
+.navbar nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.nav-link {
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #555;
+}
+.nav-link:hover {
+  background: #f1f1f1;
+}
+.nav-link.aktif {
+  background: #d9480f;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Tombol */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #d9480f;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.btn:hover {
+  background: #bf3f0d;
+}
+.btn:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+.btn-kecil {
+  padding: 4px 10px;
+}
+.btn-abu {
+  background: #e9e9e9;
+  color: #222;
+}
+.btn-abu:hover {
+  background: #dcdcdc;
+}
+.btn-bahaya {
+  background: #c92a2a;
+}
+
+/* Beranda */
+.hero {
+  text-align: center;
+  padding: 64px 0;
+}
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+.hero p {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* Katalog */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.filter input,
+.filter select,
+.form input[type="text"],
+.form input[type="number"],
+.promo input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.filter input {
+  flex: 1;
+  min-width: 180px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+.kartu {
+  display: block;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 16px;
+}
+.kartu:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.kartu h3 {
+  margin: 0 0 6px;
+}
+.kategori {
+  color: #777;
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+}
+.harga {
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+.stok {
+  margin: 0;
+  color: #2b8a3e;
+  font-size: 0.9rem;
+}
+.stok.habis {
+  color: #c92a2a;
+  font-weight: 700;
+}
+
+/* Detail */
+.detail {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 24px;
+}
+.detail h1 {
+  margin-top: 0;
+}
+.form {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+  max-width: 360px;
+}
+.pesan-error {
+  color: #c92a2a;
+  margin: 0;
+}
+.pesan-ok {
+  color: #2b8a3e;
+  margin: 0;
+}
+.habis-teks {
+  color: #c92a2a;
+  font-weight: 700;
+}
+
+/* Keranjang */
+.baris {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ringkasan {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 16px 0;
+}
+.ringkasan div {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+.ringkasan .total {
+  font-weight: 700;
+  border-top: 1px solid #eee;
+  margin-top: 6px;
+  padding-top: 6px;
+}
+.promo {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0 4px;
+}
+.radio-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+}
+.struk {
+  background: #fff;
+  border: 2px dashed #999;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+}
+.struk p {
+  margin: 4px 0;
+}
+
+/* Riwayat */
+.kotak {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+.kotak p {
+  margin: 2px 0;
+}
