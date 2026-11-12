@@ -1,0 +1,3 @@
+cd c:\KantinKU\kantinku 
+npm run dev
+kode promo: hemat10

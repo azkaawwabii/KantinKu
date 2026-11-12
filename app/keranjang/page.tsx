@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  useMemo,
-  useSyncExternalStore,
-  useState,
-  type FormEvent,
-} from "react";
+import { useMemo, useSyncExternalStore, useState, type FormEvent } from "react";
 import { menu, rupiah } from "@/data/menu";
 import {
   bacaData,
@@ -49,10 +44,7 @@ export default function KeranjangPage() {
     getSnapshotKeranjang,
     getServerSnapshotKeranjang,
   );
-  const items = useMemo(
-    () => bacaData<ItemKeranjang>(snapshot),
-    [snapshot],
-  );
+  const items = useMemo(() => bacaData<ItemKeranjang>(snapshot), [snapshot]);
 
   // promo
   const [kodeInput, setKodeInput] = useState("");
